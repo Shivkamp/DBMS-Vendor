@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Home Page</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"> <img src="/assets/logo.svg" alt="box-seam" height="20px">Fresh Mart</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="cart.html">Cart</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="#">Orders</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Postcode" aria-label="Search" id="search">
+              <button class="btn btn-outline-success" type="submit" id="check">Check</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+        <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+          <h1 class="display-4 fw-bold lh-1 text-body-emphasis">Welcome To Fresh Mart!</h1>
+          <p class="lead">FreshMart is your go-to destination for all your grocery needs. We offer a wide range of high-quality products, from fresh produce to pantry essentials, delivered straight to your doorstep. With our user-friendly website and exceptional customer service, we make grocery shopping a breeze, ensuring you have more time to enjoy the things that matter most. Discover the freshest ingredients, explore new flavors, and experience the convenience of FreshMart today.</p>
+          <!-- <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">Primary</button>
+            <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+          </div> -->
+        </div>
+        <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+            <img class="rounded-lg-3" src="assets/GettyImages-1247930626-500px.jpg" alt="" width="720">
+        </div>
+      </div>
+      <h2>Dairy products</h2>
+      <div class="products">
+        <div class="card" style="width: 18rem;">
+            <img src="assets\51F-Pn0yaoL._AC_UF1000,1000_QL80_.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Cheese</h5>
+              <button class="btn btn-primary">Add To Cart</button>
+            <button onclick="decrementQuantity('milk')">-</button>
+            <span id="quantity-milk">0</span>
+            <button onclick="incrementQuantity('milk')">+</button>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="assets\milk.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Milk</h5>
+              <p class="card-text"></p>
+              <button class="btn btn-primary">Add To Cart</button>
+            <button onclick="decrementQuantity('cheese')">-</button>
+            <span id="quantity-cheese">0</span>
+            <button onclick="incrementQuantity('cheese')">+</button>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="./assets/yogurt.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Yogurt</h5>
+              <button class="btn btn-primary">Add To Cart</button>
+              <button onclick="decrementQuantity('yogurt')">-</button>
+              <span id="quantity-yogurt">0</span>
+              <button onclick="incrementQuantity('yogurt')">+</button>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="./assets/paneer.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Paneer</h5>
+              <button class="btn btn-primary">Add To Cart</button>
+              <button onclick="decrementQuantity('paneer')">-</button>
+              <span id="quantity-paneer">0</span>
+              <button onclick="incrementQuantity('paneer')">+</button>
+            </div>        
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="./assets/milkmaid.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Milk Maid</h5>
+              <button class="btn btn-primary">Add To Cart</button>
+              <button onclick="decrementQuantity('milkmaid')">-</button>
+              <span id="quantity-milkmaid">0</span>
+              <button onclick="incrementQuantity('milkmaid')">+</button>
+            </div>        
+          </div>
+        </div>
+      <h2>Fresh Produce</h2>
+      <div class="products">
+        <div class="card" style="width: 18rem;">
+            <img src="/assets/banana.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Banana</h5>
+              <button class="btn btn-primary">Add To Cart</button>
+              <button onclick="decrementQuantity('banana')">-</button>
+              <span id="quantity-banana">0</span>
+              <button onclick="incrementQuantity('banana')">+</button>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="/assets/apple.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Apple</h5>
+              <p class="card-text"></p>
+              <button class="btn btn-primary">Add To Cart</button>
+              <button onclick="decrementQuantity('apple')">-</button>
+              <span id="quantity-apple">0</span>
+              <button onclick="incrementQuantity('apple')">+</button>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="./assets/carrot.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Carrots</h5>
+              <button class="btn btn-primary">Add To Cart</button>
+              <button onclick="decrementQuantity('carrot')">-</button>
+              <span id="quantity-carrot">0</span>
+              <button onclick="incrementQuantity('carrot')">+</button>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="./assets/tomatoes.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Tomatoes</h5>
+              <button class="btn btn-primary">Add To Cart</button>
+              <button onclick="decrementQuantity('tomatoes')">-</button>
+              <span id="quantity-tomatoes">0</span>
+              <button onclick="incrementQuantity('tomatoes')">+</button>
+            </div>        
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="./assets/watermelon.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Watermelon</h5>
+              <button class="btn btn-primary">Add To Cart</button>
+              <button onclick="decrementQuantity('watermelon')">-</button>
+              <span id="quantity-watermelon">0</span>
+              <button onclick="incrementQuantity('watermelon')">+</button>
+            </div>        
+          </div>
+      </div>
+      <h2>Meat And Seafood</h2>
+      <div class="products">
+        <div class="card" style="width: 18rem;">
+            <img src="/assets/chicken.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Chicken</h5>
+              <button class="btn btn-primary">Add To Cart</button>
+              <button onclick="decrementQuantity('chicken')">-</button>
+              <span id="quantity-chicken">0</span>
+              <button onclick="incrementQuantity('chicken')">+</button>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="/assets/fish.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Fish</h5>
+              <p class="card-text"></p>
+              <button class="btn btn-primary">Add To Cart</button>
+              <button onclick="decrementQuantity('fish')">-</button>
+              <span id="quantity-fish">0</span>
+              <button onclick="incrementQuantity('fish')">+</button>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="./assets/shrimp.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shrimp</h5>
+              <button class="btn btn-primary">Add To Cart</button>
+              <button onclick="decrementQuantity('shrimp')">-</button>
+              <span id="quantity-shrimp">0</span>
+              <button onclick="incrementQuantity('shrimp')">+</button>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="./assets/lamb.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Lamb</h5>
+              <button class="btn btn-primary">Add To Cart</button>
+              <button onclick="decrementQuantity('lamb')">-</button>
+              <span id="quantity-lamb">0</span>
+              <button onclick="incrementQuantity('lamb')">+</button>
+            </div>        
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="./assets/crab.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Crab</h5>
+              <button class="btn btn-primary">Add To Cart</button>
+              <button onclick="decrementQuantity('crab')">-</button>
+              <span id="quantity-crab">0</span>
+              <button onclick="incrementQuantity('crab')">+</button>
+            </div>        
+          </div>
+        </div>
+        
+      <h2>Snacks And Beverages</h2>
+      <div class="products">
+        <div class="card" style="width: 18rem;">
+            <img src="/assets/coffee.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Coffee</h5>
+              <button class="btn btn-primary">Add To Cart</button>
+              <button onclick="decrementQuantity('soda')">-</button>
+              <span id="quantity-soda">0</span>
+              <button onclick="incrementQuantity('soda')">+</button>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="/assets/tea.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Tea</h5>
+              <p class="card-text"></p>
+              <button class="btn btn-primary">Add To Cart</button>
+              <button onclick="decrementQuantity('tea')">-</button>
+              <span id="quantity-tea">0</span>
+              <button onclick="incrementQuantity('tea')">+</button>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="./assets/chips.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Chips</h5>
+              <button class="btn btn-primary">Add To Cart</button>
+              <button onclick="decrementQuantity('chips')">-</button>
+              <span id="quantity-chips">0</span>
+              <button onclick="incrementQuantity('chips')">+</button>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="./assets/cookie.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Cookies</h5>
+              <button class="btn btn-primary">Add To Cart</button>
+              <button onclick="decrementQuantity('cookie')">-</button>
+              <span id="quantity-cookie">0</span>
+              <button onclick="incrementQuantity('cookie')">+</button>
+            </div>        
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="./assets/soda.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Soda</h5>
+              <button class="btn btn-primary">Add To Cart</button>
+              <button onclick="decrementQuantity('coffee')">-</button>
+              <span id="quantity-coffee">0</span>
+              <button onclick="incrementQuantity('coffee')">+</button>
+            </div>        
+          </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
